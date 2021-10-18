@@ -30,6 +30,11 @@ const displayData =()=> {
 
  displayData();
  const saveData = () => localStorage.setItem("savedInput", JSON.stringify(collection));
+ const removeBook = (index) =>{
+  collection.splice(index, 1);
+  saveData();
+  displayData();
+}
 
 
 addBtn.addEventListener("click", (e) => {
