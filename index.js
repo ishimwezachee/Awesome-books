@@ -26,15 +26,14 @@ const displayData = () => {
   });
 };
 
-
 displayData();
 const saveData = () => localStorage.setItem('savedInput', JSON.stringify(collection));
 const removeBook = (index) => {
-if (index !== null && index !== undefined) {
-  collection.splice(index, 1);
-  saveData();
-  displayData();
-}
+  if (index !== null && index !== undefined) {
+    collection.splice(index, 1);
+    saveData();
+    displayData();
+  }
 };
 
 removeBook();
