@@ -20,7 +20,7 @@ const displayData = () => {
                 <li class="title">${value.name}</li>
                 <li class="author">${value.author}</li>
             </ul>
-             <button onclick="removeBook(${index});">remove</button>
+             <button id="remove" onclick="removeBook(${index});">remove</button>
              <hr>
            </div>`;
   });
@@ -34,6 +34,7 @@ const removeBook = (index) => {
   displayData();
 };
 
+removeBook();
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const newData = {
