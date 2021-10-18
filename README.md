@@ -31,7 +31,7 @@ To get this project in your local machine, follow these steps:
 
 ## Authors
 
-👤 **Author1**
+👤 **Zachee Ishimwe**
 
 - GitHub: [@zacheeIshimwe](https://github.com/ishimwezachee)
 - LinkedIn: [@zacheeIshimwe](https://www.linkedin.com/in/zachee-ishimwe-ab952a119/)
