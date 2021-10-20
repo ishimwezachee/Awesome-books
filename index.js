@@ -1,37 +1,31 @@
-const divbooks = document.querySelector(".books");
-const inputTitle = document.querySelector("#title");
-const inputAuthor = document.querySelector("#author");
-const addBtn = document.querySelector("#add");
-
-class Onebook {
-  constructor(name, author) {
-    this.name = name;
-    this.author = author;
-  }
-}
+const divbooks = document.querySelector('.books');
+const inputTitle = document.querySelector('#title');
+const inputAuthor = document.querySelector('#author');
+const addBtn = document.querySelector('#add');
 
 class Book {
   constructor(savedData = []) {
     this.arr = savedData;
   }
-  set_data_to_local_storage(data) {
-    let existing = JSON.parse(localStorage.getItem("book"));
-    existing = existing ? existing : [];
+
+  saveData(data) {
+    let existing = JSON.parse(localStorage.getItem('book'));
+    existing = existing || [];
     this.arr = existing;
     this.arr.push(data);
-    localStorage.setItem("book", JSON.stringify(this.arr));
+    localStorage.setItem('book', JSON.stringify(this.arr));
   }
 
   removeBook = (index) => {
     if (index !== null && index !== undefined) {
       this.arr.splice(index, 1);
-      localStorage.setItem("book", JSON.stringify(this.arr));
+      localStorage.setItem('book', JSON.stringify(this.arr));
       this.retrieve_data_and_display();
     }
   };
 
-  retrieve_data_and_display() {
-    divbooks.innerHTML = "";
+  getData() {
+    divbooks.innerHTML = '';
     this.arr.forEach((value, index) => {
       divbooks.innerHTML += `
               <div class="books">
@@ -46,19 +40,19 @@ class Book {
   }
 }
 
-let all_local_data = JSON.parse(localStorage.getItem("book"));
+let collection = JSON.parse(localStorage.getItem('book'));
 
-if (all_local_data === null) {
-  all_local_data = [];
+if (collection === null) {
+  collection = [];
 }
-let bookArr = new Book(all_local_data);
-addBtn.addEventListener("click", (e) => {
+const bookArr = new Book(collection);
+addBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  const book1 = new Onebook(inputTitle.value, inputAuthor.value);
-  bookArr.set_data_to_local_storage(book1);
+  const book1 = { name: inputTitle.value, author: inputAuthor.value };
+  bookArr.saveData(book1);
   bookArr.retrieve_data_and_display();
 });
 
 const remove = (index) => bookArr.removeBook(index);
 remove();
-bookArr.retrieve_data_and_display();
+bookArr.getData();
