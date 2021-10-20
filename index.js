@@ -20,7 +20,7 @@ class Book {
     if (index !== null && index !== undefined) {
       this.arr.splice(index, 1);
       localStorage.setItem('book', JSON.stringify(this.arr));
-      this.retrieve_data_and_display();
+      this.getData();
     }
   };
 
@@ -29,12 +29,14 @@ class Book {
     this.arr.forEach((value, index) => {
       divbooks.innerHTML += `
               <div class="books">
-              <ul>
+              <div class="list-btn">
+              <ul class="list">
                   <li class="title">${value.name}</li>
                   <li class="author">${value.author}</li>
               </ul>
               <button id="remove" onclick="remove(${index});">remove</button>
-               <hr>
+              </div>
+              <hr>
              </div>`;
     });
   }
@@ -50,7 +52,7 @@ addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   const book1 = { name: inputTitle.value, author: inputAuthor.value };
   bookArr.saveData(book1);
-  bookArr.retrieve_data_and_display();
+  bookArr.getData();
 });
 
 const remove = (index) => bookArr.removeBook(index);
