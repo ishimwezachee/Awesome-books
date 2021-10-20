@@ -26,6 +26,10 @@ h2 {
   text-align: center;
 }
 
+.by {
+  margin: 0 5px;
+}
+
 form {
   display: flex;
   flex-direction: column;
