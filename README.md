@@ -8,6 +8,7 @@
 ## Built With
 
 - HTML5 
+- CSS
 - JS 
 
 ## Getting Started
