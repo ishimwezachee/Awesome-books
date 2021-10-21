@@ -9,25 +9,29 @@
 </head>
 <body>
     <header>
-        <h1>Awesome books</h1>
+        <h1>
+            <a href="./index.html">
+                Awesome books
+            </a>
+        </h1>
         <nav class="nav">
             <ul class="list">
-                <li class="list-item"><a class="list-link" href="#">List</a></li>
-                <li class="list-item"><a class="list-link" href="#">Add new</a></li>
-                <li class="list-item"><a class="list-link" href="#">Contact</a></li>
+                <li class="list-item" id="list_nav"><a class="list-link" href="#">List</a></li>
+                <li class="list-item" id="add_nav"><a class="list-link" href="#">Add new</a></li>
+                <li class="list-item" id="contact_nav"><a class="list-link" href="#">Contact</a></li>
             </ul>
         </nav>
     </header>
     <h5 class="date">March 19th 2021,</h5>
     <main id="main">
-       <section>
+       <section id="all_books">
         <h2 class="all">All Awesome books</h2>
         <div class="all_books">
           <div class="books">
           </div>
         </div>
        </section>
-     <section>
+     <section id="add_book">
         <h2>Add a new book</h2>
         <form action="#">
             <input id="title" type="text" placeholder="Title">
@@ -35,7 +39,7 @@
             <button id="add" type="submit">Add</button>
         </form>
      </section>
-     <section>
+     <section id="contact_info">
          <h2>Contact information</h2>
          <p class="questions">Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
          <ul class="contacts">

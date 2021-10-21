@@ -21,11 +21,11 @@ ul {
   margin: 0;
 }
 
-.contacts{
+.contacts {
   display: block;
 }
 
-.list-link{
+.list-link {
   text-decoration: none;
   font-size: 22px;
   margin-left: 10px;
@@ -35,7 +35,7 @@ ul {
   border-right: 1px solid;
 }
 
-.list-link:hover{
+.list-link:hover {
   color: red;
 }
 
@@ -54,9 +54,9 @@ h2 {
   text-align: center;
 }
 
-.date{
+.date {
   text-align: right;
-  margin:20px;
+  margin: 20px;
 }
 
 .by {
@@ -105,4 +105,17 @@ button {
 
 #add {
   align-self: center;
+}
+
+#add_book {
+  display: none;
+}
+
+#contact_info {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }

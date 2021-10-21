@@ -2,6 +2,32 @@ const divbooks = document.querySelector('.books');
 const inputTitle = document.querySelector('#title');
 const inputAuthor = document.querySelector('#author');
 const addBtn = document.querySelector('#add');
+const list_nav = document.querySelector('#list_nav');
+const add_nav = document.querySelector('#add_nav');
+const contact_nav = document.querySelector('#contact_nav');
+const list_section = document.querySelector('#all_books');
+const add_section = document.querySelector('#add_book');
+const contact_section = document.querySelector('#contact_info');
+
+
+contact_nav.addEventListener('click',()=>{
+  contact_section.style.display = "block";
+  list_section.style.display = "none";
+  add_section.style.display = "none";
+});
+
+add_nav.addEventListener('click',()=>{
+  add_section.style.display = "block";
+  list_section.style.display = "none";
+  contact_section.style.display = "none";
+  
+});
+
+list_nav.addEventListener('click',()=>{
+  list_section.style.display = "block";
+  contact_section.style.display = "none";
+  add_section.style.display = "none";
+});
 
 class Book {
   constructor(savedData = []) {
