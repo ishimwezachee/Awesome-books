@@ -1,5 +1,5 @@
 body {
-  margin: 20px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -11,7 +11,7 @@ header {
   border: 1px solid rgb(235, 235, 235);
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
   padding: 0 20px;
-  margin-bottom: 20px;
+  margin: 15px 20px;
 }
 
 ul {
@@ -19,6 +19,10 @@ ul {
   align-items: center;
   list-style: none;
   margin: 0;
+}
+
+.contacts{
+  display: block;
 }
 
 .list-link{
@@ -48,6 +52,11 @@ ul {
 h1,
 h2 {
   text-align: center;
+}
+
+.date{
+  text-align: right;
+  margin:20px;
 }
 
 .by {
