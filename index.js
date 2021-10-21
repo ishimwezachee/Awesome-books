@@ -86,6 +86,8 @@ addBtn.addEventListener('click', (e) => {
   } else {
     alert('please fill all the inputs');
   }
+  inputTitle.value='';
+  inputAuthor.value=''
 });
 
 const remove = (index) => bookArr.removeBook(index);
