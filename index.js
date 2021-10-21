@@ -9,7 +9,10 @@ const listSection = document.querySelector('#all_books');
 const addSection = document.querySelector('#add_book');
 const contactSection = document.querySelector('#contact_info');
 const date = document.querySelector('.date');
-
+const lux = window.luxon;
+const { DateTime } = lux;
+const localTime = DateTime.local();
+date.innerHTML = DateTime.fromISO(localTime).toLocaleString(DateTime.DATETIME_MED);
 contactNav.addEventListener('click', () => {
   contactSection.style.display = 'block';
   listSection.style.display = 'none';
