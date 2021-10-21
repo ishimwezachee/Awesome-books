@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"
+      integrity="sha512-frUCURIeB0OKMPgmDEwT3rC4NH2a4gn06N3Iw6T1z0WfrQZd7gNfJFbHrNsZP38PVXOp6nUiFtBqVvmCj+ARhw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>
-            <a href="./index.html">
-                Awesome books
-            </a>
-        </h1>
-        <nav class="nav">
-            <ul class="list">
-                <li class="list-item" id="list_nav"><a class="list-link" href="#">List</a></li>
-                <li class="list-item" id="add_nav"><a class="list-link" href="#">Add new</a></li>
-                <li class="list-item" id="contact_nav"><a class="list-link" href="#">Contact</a></li>
-            </ul>
-        </nav>
+      <h1>
+        <a href="./index.html"> Awesome books </a>
+      </h1>
+      <nav class="nav">
+        <ul class="list">
+          <li class="list-item" id="list_nav">
+            <a class="list-link" href="#">List</a>
+          </li>
+          <li class="list-item" id="add_nav">
+            <a class="list-link" href="#">Add new</a>
+          </li>
+          <li class="list-item" id="contact_nav">
+            <a class="list-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
-    <h5 class="date">March 19th 2021,</h5>
+    <h5 class="date"></h5>
     <main id="main">
-       <section id="all_books">
+      <section id="all_books">
         <h2 class="all">All Awesome books</h2>
         <div class="all_books">
-          <div class="books">
-          </div>
+          <div class="books"></div>
         </div>
-       </section>
-     <section id="add_book">
+      </section>
+      <section id="add_book">
         <h2>Add a new book</h2>
         <form action="#">
-            <input id="title" type="text" placeholder="Title">
-            <input id="author" type="text" placeholder="Author">
-            <button id="add" type="submit">Add</button>
+          <input id="title" type="text" placeholder="Title" />
+          <input id="author" type="text" placeholder="Author" />
+          <button id="add" type="submit">Add</button>
         </form>
-     </section>
-     <section id="contact_info">
-         <h2>Contact information</h2>
-         <p class="questions">Do you have any questions or you just want to say "Hello"? You can reach out to us!</p>
-         <ul class="contacts">
-             <li class="list-contact">Our e-mail: mail@gmail.com</li>
-             <li  class="list-contact">Our Phone number:0043586534422</li>
-             <li  class="list-contact">Our address:Streetname 22,84503 city, Country</li>
-         </ul>
-     </section>
+      </section>
+      <section id="contact_info">
+        <h2>Contact information</h2>
+        <p class="questions">
+          Do you have any questions or you just want to say "Hello"? You can
+          reach out to us!
+        </p>
+        <ul class="contacts">
+          <li class="list-contact">Our e-mail: mail@gmail.com</li>
+          <li class="list-contact">Our Phone: number:0043586534422</li>
+          <li class="list-contact">
+            Our address: Streetname 22,84503 city, Country
+          </li>
+        </ul>
+      </section>
     </main>
     <script src="./index.js"></script>
-</body>
+  </body>
 </html>
