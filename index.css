@@ -1,7 +1,17 @@
 body {
-  margin: 20px;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(235, 235, 235);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 0 20px;
+  margin: 15px 20px;
 }
 
 ul {
@@ -9,6 +19,24 @@ ul {
   align-items: center;
   list-style: none;
   margin: 0;
+}
+
+.contacts {
+  display: block;
+}
+
+.list-link {
+  text-decoration: none;
+  font-size: 22px;
+  margin-left: 10px;
+  padding-right: 5px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border-right: 1px solid;
+}
+
+.list-link:hover {
+  color: red;
 }
 
 .title {
@@ -24,6 +52,12 @@ ul {
 h1,
 h2 {
   text-align: center;
+}
+
+.date {
+  text-align: right;
+  margin: 20px;
+  font-size: 15px;
 }
 
 .by {
@@ -57,7 +91,7 @@ main {
 #title,
 #author {
   width: 50%;
-  margin: auto;
+  margin: 10px auto;
   height: 30px;
   margin-bottom: 5px;
   border-radius: 6px;
@@ -72,4 +106,29 @@ button {
 
 #add {
   align-self: center;
+  margin-top: 20px;
+}
+
+#add_book {
+  display: none;
+}
+
+#contact_info {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.questions {
+  font-size: 30px;
+  padding-top: 30px;
+}
+
+.contacts .list-contact {
+  list-style: outside;
+  font-size: 22px;
+  padding: 10px;
 }
